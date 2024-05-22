@@ -14,7 +14,7 @@ export default function FaqItem({ question, answer }) {
         <span className="text-lg font-medium text-gray-800">{question}</span>
         <span className="text-lg font-medium text-gray-800">{isOpen ? '-' : '+'}</span>
       </button>
-      {isOpen && <p className="mt-2 text-gray-600">{answer}</p>}
+      {isOpen && <div className="mt-2 text-gray-600">{answer}</div>}
     </div>
   );
 }

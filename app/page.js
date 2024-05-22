@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Header from '@/app/components/header';
 import FaqItem from '@/app/components/FaqItem';
-import Footer from '@/app/components/header';
+import Footer from '@/app/components/Footer';
 import { fetchCourseSeries, fetchFaqs, fetchTags } from '@/app/lib/api';
 
 export default function Home() {
@@ -108,7 +108,7 @@ export default function Home() {
           </ul>
         </section> */}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
