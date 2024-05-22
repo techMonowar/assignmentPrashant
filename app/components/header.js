@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Searchbar from "@/app/components/searchbar"
 
 export default function Header() {
   return (
@@ -11,9 +12,7 @@ export default function Header() {
 <h1 className="">Acharya Prashant is dedicated to building a brighter future for you
 </h1>
 </div>
-<div className="h-12 border-2">
-  <input type="text" />
-</div>
+<Searchbar />
 </div>
   );
 }
