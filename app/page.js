@@ -41,6 +41,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow container mx-auto px-4">
+      <h1 className="text-3xl font-bold my-4">{courseSeries.details.title}</h1>
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
       <Image
                 src={`${imgDomain}${courseSeries.details.thumbnail.basePath}/${10}/image.jpg`} // Assuming each course has an image property
                 alt={courseSeries.title}
@@ -48,8 +50,14 @@ export default function Home() {
                 height={200}
                 className="rounded-lg mb-4"
               />
-        <h1 className="text-3xl font-bold my-4">{courseSeries.details.title}</h1>
+        <div>
+        <h1 className="text-3xl font-bold my-4">{courseSeries.details.subtitle}</h1>
         <p className="text-lg mb-8">{courseSeries.details.description}</p>
+        </div>
+        </div>
+
+
+
         <section>
           <h2 className="text-2xl font-semibold mb-4">Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
