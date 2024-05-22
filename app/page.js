@@ -44,12 +44,13 @@ export default function Home() {
       <h1 className="text-3xl font-bold my-4">{courseSeries.details.title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
       <Image
-                src={`${imgDomain}${courseSeries.details.thumbnail.basePath}/${10}/image.jpg`} // Assuming each course has an image property
-                alt={courseSeries.title}
-                width={300}
-                height={200}
-                className="rounded-lg mb-4"
-              />
+  src={`${imgDomain}${courseSeries.details.thumbnail.basePath}/10/image.jpg`}
+  alt={courseSeries.title}
+  layout="responsive"
+  width={100}
+  height={56.25} // Adjust height according to the aspect ratio of the image
+  className="rounded-lg mb-4"
+/>
         <div>
         <h1 className="text-3xl font-bold my-4">{courseSeries.details.subtitle}</h1>
         <p className="text-lg mb-8">{courseSeries.details.description}</p>
@@ -59,7 +60,7 @@ export default function Home() {
 
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Courses</h2>
+          <h2 className="text-2xl font-semibold mb-4">Video series ({courseSeries.details.coursesCount})</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courseSeries.courses.map((course) => (
               <Link key={course.id} href={`/courses/${course.slug}`} className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-100 transition">
