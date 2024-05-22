@@ -8,9 +8,10 @@ export default function Header() {
    
     </div>
 
-<div className="h-12 bg-blue-900">
+<div className="h-12 flex gap-8  bg-gray-900 w-full items-center text-center justify-around text-white">
 <h1 className="">Acharya Prashant is dedicated to building a brighter future for you
 </h1>
+<button>Extend your hand</button>
 </div>
 <Searchbar />
 </div>

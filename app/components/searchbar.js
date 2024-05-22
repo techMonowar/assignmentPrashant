@@ -32,7 +32,7 @@ const SearchBar = () => {
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo */}
         <div>
-          <img src="/logo.svg" alt="Logo" className="h-8" />
+          <img src="https://acharyaprashant.org/images/ic_videoseries.png" alt="Logo" className="h-8" />
         </div>
 
         {/* Mobile Search Bar */}
@@ -50,7 +50,7 @@ const SearchBar = () => {
                   <input
                     type="text"
                     placeholder="Search..."
-                    className="bg-gray-100 border border-gray-200 px-4 py-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                    className="bg-gray-100 border border-gray-200 px-4 py-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-20"
                   />
                 </>
               ) : (
@@ -82,10 +82,10 @@ const SearchBar = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                className="bg-gray-100 border border-gray-200 px-4 py-2 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                className="bg-gray-100 border border-gray-200 px-4 py-2 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-50"
               />
               <button
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400"
               >
                 <FaSearch />
               </button>
