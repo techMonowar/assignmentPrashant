@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Header from '@/app/components/header';
+import FaqItem from '@/app/components/FaqItem';
 import Footer from '@/app/components/header';
 import { fetchCourseSeries, fetchFaqs, fetchTags } from '@/app/lib/api';
 
@@ -90,11 +91,13 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
           <ul className="list-disc list-inside">
             {faqs.map((faq) => (
-              <li key={faq.id}>{faq.question}</li>
+              <FaqItem key={faq.id} question={faq.question} answer={faq.answer} />
             ))}
           </ul>
         </section>
-        <section className="mt-8">
+
+
+        {/* <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">Tags</h2>
           <ul className="flex flex-wrap gap-2">
             {tags.map((tag) => (
@@ -103,9 +106,9 @@ export default function Home() {
               </li>
             ))}
           </ul>
-        </section>
+        </section> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
