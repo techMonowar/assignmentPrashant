@@ -14,6 +14,12 @@ export default function Home() {
 
   const imgDomain = "https://cimg.acharyaprashant.org/";
 
+  function formatHours(hours) {
+    const h = Math.floor(hours);
+    const m = Math.round((hours - h) * 60);
+    return `${h} Hours ${m} Minutes`;
+  }
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -64,19 +70,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courseSeries.courses.map((course) => (
               <Link key={course.id} href={`/courses/${course.slug}`} className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-100 transition">
-              <Image
-                src={course.image} // Assuming each course has an image property
-                alt={course.title}
-                width={300}
-                height={200}
-                className="rounded-lg mb-4"
-              />
+             
               <h3 className="text-xl font-medium">{course.title}</h3>
               <p className="text-gray-600">{course.subtitle}</p>
+              <p className="text-gray-600">{formatHours(course.courseHours)}</p>
+              <p className="text-gray-600">  Contribution: ₹{course.amount} <span className="line-through">₹{course.originalAmount}</span></p>
+              <p className="text-gray-600">{course.language}</p>
+              
             </Link>
             ))}
           </div>
         </section>
+
+
+
+
+
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
           <ul className="list-disc list-inside">
